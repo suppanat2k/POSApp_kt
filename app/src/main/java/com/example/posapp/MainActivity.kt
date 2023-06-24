@@ -10,6 +10,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var btnSetName: Button
     private lateinit var textView: TextView
     private var countNum: Int = 0
+    private var isLimit: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,7 +21,16 @@ class MainActivity : AppCompatActivity() {
         textView.text = countNum.toString()
 
         btnSetName.setOnClickListener{
-            countNum++
+            if(countNum == 20){ 
+                isLimit = true
+            }else if(countNum == 0){
+                isLimit = false   
+            }
+            if(!isLimit){
+                countNum++ 
+            }else{
+                countNum--
+            }
             textView.text = countNum.toString()
         }
     }
