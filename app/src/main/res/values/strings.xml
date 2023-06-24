@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">POSApp</string>
+    <string name="hi_suppanat">Hi Suppanat</string>
+    <string name="set_your_name">Set your name</string>
+</resources>
